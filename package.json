@@ -1,6 +1,6 @@
 {
   "name": "passport-authic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Authic strategy for Passport",
   "author": { "name": "Authic Team", "email": "support@authic.com", "url": "https://www.authic.com" },
   "repository": {
