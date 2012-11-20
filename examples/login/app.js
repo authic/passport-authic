@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -11,9 +10,9 @@ var express = require('express'),
     AuthicStrategy = require('passport-authic').Strategy,
     // Authic Settings 
     authic_client_id =  '<Your Authic client key>',
-	  authic_client_secret = '<Your Authic client secret>',
-	  authic_callback_url = "http://localhost:3000/auth/authic/callback", // Needs to match what you setup in Authic
-	  authic_subdomain =  "<Your Authic subdomain>";
+    authic_client_secret = '<Your Authic client secret>',
+    authic_callback_url = "http://localhost:3000/auth/authic/callback", // Needs to match what you setup in Authic
+    authic_subdomain =  "<Your Authic subdomain>";
 
 var app = express();
 
