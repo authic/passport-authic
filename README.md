@@ -83,12 +83,12 @@ You might want to set a route to send the user off to Authic's hosted account sc
 
 You will probably also want a logout route. This will log your user out of both your app and the Authic server:
 
-  app.get('/logout', function(req, res){
-    req.logout();
-    // Set this to where ever you want to redirect to after Authic has signed your user out
-    var return_url = encodeURIComponent("http://localhost:3000");
-    res.redirect('https://' + authic_subdomain + '.authic.com/authic_sign_out?&return_url=' + return_url);
-  });
+    app.get('/logout', function(req, res){
+      req.logout();
+      // Set this to where ever you want to redirect to after Authic has signed your user out
+      var return_url = encodeURIComponent("http://localhost:3000");
+      res.redirect('https://' + authic_subdomain + '.authic.com/authic_sign_out?&return_url=' + return_url);
+    });
 
 ## Example App
 
