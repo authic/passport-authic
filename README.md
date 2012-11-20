@@ -19,9 +19,6 @@ It depends on the following modules:
 ## Usage
 
 #### Configure The Strategy
-
-The strategy requires a `verify` callback, which accepts the credentials and calls `done` providing a user, as well as
-`options` specifying a client ID, client secret, subdomain and callback URL.
     
     // Authic Settings 
     var AuthicStrategy = require('passport-authic').Strategy,
@@ -44,11 +41,7 @@ The strategy requires a `verify` callback, which accepts the credentials and cal
 
 #### Authenticating Users with Authic
 
-Use `passport.authenticate()`, specifying the `'authic'` strategy, to
-authenticate the user.
-
-For example, as route middleware in an [Express](http://expressjs.com/)
-application:
+Authenticate users with `passport.authenticate()`:
 
     app.get('/login', function(req, res){
       res.redirect('/auth/authic');
