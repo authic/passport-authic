@@ -87,6 +87,9 @@ You will probably also want a logout route. This will log your user out of both 
 
 Refer to the examples folder in the root of this project for a working sample application using passport-authic.
 
+## About Authic
+[Authic](https://www.authic.com) is a secure, brandable cloud authentication service that integrates into your web app in seconds leaving you to concentrate on your core business functionality.
+
 ## License
 
 (The MIT License)
