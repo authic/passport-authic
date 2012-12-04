@@ -44,7 +44,11 @@ It depends on the following modules:
 Authenticate users with `passport.authenticate()`:
 
     app.get('/login', function(req, res){
-      res.redirect('/auth/authic');
+      res.redirect('/auth/authic?authic_action=signin');
+    });
+
+    app.get('/register', function(req, res){
+      res.redirect('/auth/authic?authic_action=signup');
     });
 
     app.get('/auth/authic',
