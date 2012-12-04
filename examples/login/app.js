@@ -69,13 +69,17 @@ app.get('/', function(req, res){
 app.get('/account', ensureAuthenticated, function(req, res){
   res.redirect('https://' + authic_subdomain + '.authic.com/edit_account');
 });
-
+// user friendly route to login
 app.get('/login', function(req, res){
-	res.redirect('/auth/authic');
+	res.redirect('/auth/authic?authic_action=signin');
+});
+// user friendly route to registration
+app.get('/register', function(req, res){
+	res.redirect('/auth/authic?authic_action=signup');
 });
 
 app.get('/auth/authic',
-  passport.authenticate('authic'),
+	passport.authenticate('authic'),
   function(req, res){
     // The request will be redirected to Authic for authentication, so
     // this function will not be called.
@@ -87,7 +91,7 @@ app.get('/auth/authic/callback',
     // Successful authentication, redirect home.
     res.redirect('/');
 });
-
+// user friendly route to logout
 app.get('/logout', function(req, res){
   req.logout();
   // Set this to whereever you want to redirect to after authic has signed out

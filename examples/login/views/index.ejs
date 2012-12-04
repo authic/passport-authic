@@ -8,7 +8,8 @@
 		<% if (!user) { %>
 			<p>
 			<a href="/">Home</a> | 
-			<a href="/login">Log In</a>
+			<a href="/login">Log In</a>| 
+			<a href="/register">Register</a>
 			</p>
 		<% } else { %>
 			<p>
@@ -27,6 +28,5 @@
       <p>Username: <%= user.username %></p>
       <p>Name: <%= user.displayName %></p>
     <% } %>
-    
 	</body>
 </html>
